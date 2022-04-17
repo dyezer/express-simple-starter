@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-training",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/dyezer/nodejs-training.git",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon -e js,hbs --exec babel-node ./app/server.js",
+    "kill": "npx kill-port 3000",
+    "clear": "npm cache clean --force",
+    "clean": "npm cache verify"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
