@@ -1,22 +1,40 @@
 {
-  "name": "nodejs-training",
-  "version": "1.0.0",
+  "name": "express-simple-starter",
+  "version": "2.0.0",
   "main": "app.js",
-  "repository": "https://github.com/dyezer/nodejs-training.git",
+  "repository": "https://github.com/dyezer/express-simple-starter.git",
   "license": "MIT",
+  "author": "dyezer",
+  "keywords": [],
+  "type": "module",
   "scripts": {
-    "dev": "nodemon -e js,hbs --exec babel-node ./app/server.js",
-    "kill": "npx kill-port 3000",
     "clear": "npm cache clean --force",
-    "clean": "npm cache verify"
+    "clean": "npm cache verify",
+    "kill": "npx kill-port 3000",
+    "start": "nodemon ./bin/www.js",
+    "dev": "SET DEBUG=app:* & nodemon ./bin/www.js",
+    "test": "mocha ./tests/*.test.js"
+  },
+  "browserslist": "defaults",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.5",
-    "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.11"
-  },
-  "dependencies": {
-    "express": "^4.17.3"
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "nodemon": "^2.0.21",
+    "prettier": "^2.8.4",
+    "supertest": "^6.3.3"
   }
 }
