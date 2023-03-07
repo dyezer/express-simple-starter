@@ -12,7 +12,7 @@ const debug = debugLib('express-simple-starter:server')
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000')
+const port = normalizePort(process.env.PORT || '5000')
 app.set('port', port)
 /**
  * Create HTTP server.
@@ -23,7 +23,8 @@ const server = http.createServer(app)
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port)
+const bindIP = "127.0.0.1"
+server.listen(port, bindIP)
 server.on('error', onError)
 server.on('listening', onListening)
 
