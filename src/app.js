@@ -44,5 +44,7 @@ app.use(function (err, req, res, next) {
 // console.log(process.env.BASE_PATH);
 // console.log(__dirname)
 
+app.disable("view cache"); // TODO: off in prod
+
 console.log("run server: " + process.env.APP_URL);
 export default app
